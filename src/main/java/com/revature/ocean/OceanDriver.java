@@ -3,7 +3,7 @@ package com.revature.ocean;
  * Domain planned: Ocean 
  * Abstract : SeaCreatures
  * Interface : Air
- * Concrete examples : Shark, Turtle,
+ * Concrete examples : Shark, Turtle 
  * Methods :  Breathing, Swim, Diet, Reproduce (may need to change)
  * Strings : tag, size, diet  
  *  
@@ -13,7 +13,9 @@ package com.revature.ocean;
 public class OceanDriver {
 
 	public static void main(String[] args) {
-		System.out.println("Ocean : ");
+		System.out.println("OceanDriver finds a : ");
+		
+		
 
 	}
 

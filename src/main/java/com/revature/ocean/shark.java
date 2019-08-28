@@ -1,26 +1,26 @@
 package com.revature.ocean;
 
-public class shark extends SeaCreature implements Air {
+public class Shark extends SeaCreature implements Air {
 
-	public shark(String tag, String size, boolean predator) {
+	public Shark(String tag, String size, boolean predator) {
 		super(tag, size, predator);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public void breathing() {
-		// TODO Auto-generated method stub
+		System.out.println("breaths through gills.");
 
 	}
 
 	@Override
 	public void diet() {
-		System.out.println("hunts for food");
+		System.out.println("hunts turtles for food.");
 
 	}
 
 	@Override
 	public void reproduce() {
-		System.out.println("only 1 offspring survives");
+		System.out.println("only 1 offspring survive.");
 
 	}
 

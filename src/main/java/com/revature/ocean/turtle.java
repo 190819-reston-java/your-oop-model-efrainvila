@@ -2,10 +2,11 @@ package com.revature.ocean;
 
 public class Turtle extends SeaCreature implements Air {
 
-		
+	public static int population = 0;	
+	
 	public Turtle(String tag, String size, int travel) {
 		super(tag, size, travel);
-		
+		population++;
 	}
 	
 	public Turtle(String tag, String size) {
@@ -37,5 +38,12 @@ public class Turtle extends SeaCreature implements Air {
 
 	}
 	
+	public void diet(Fish fish) {
+		System.out.println(this.getTag() + " prefers hunting fish.");
+	}
 	
+	public void diet(Crustacean crab) {
+		System.out.println(this.getTag() + " loves eating crabs!");
+	}
 }
+	

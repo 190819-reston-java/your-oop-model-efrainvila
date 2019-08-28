@@ -47,7 +47,11 @@ public class OceanDriver {
 		System.out.println(Shark.population);
 		
 		//collection mode
+		System.out.println("Shark Logs");
 		sharkHerd();
+		
+		System.out.println("Turtle Logs");
+		turtleBale();
 		
 		
 	}
@@ -62,15 +66,23 @@ public class OceanDriver {
 		for(Shark sharkGuide : sharkList) {
 			System.out.println(sharkGuide);
 		}
+		//System.out.println(sharkList);
+	}
+	
+	
+	private static void turtleBale() {
+		List<Turtle> turtleList = new ArrayList<Turtle>();
+		turtleList.add(new Turtle("Kate", "3 feet 8 inches", 1994));
+		turtleList.add(new Turtle("Polymnia", "2 feet 6 inches", 3316));
+		turtleList.add(new Turtle("Holly", "3 feet 6 inches"));
+		turtleList.add(new Turtle("Melanie"));
 		
+		for(Turtle turtleGuide : turtleList) {
+			System.out.println(turtleGuide);
+		}
+	}
 		
 	
-		//System.out.println(sharkList);
-		
 		
 		
 	}
-
-	
-
-}

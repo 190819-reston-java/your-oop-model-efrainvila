@@ -75,7 +75,7 @@ public class OceanDriver {
 		turtleList.add(new Turtle("Kate", "3 feet 8 inches", 1994));
 		turtleList.add(new Turtle("Polymnia", "2 feet 6 inches", 3316));
 		turtleList.add(new Turtle("Holly", "3 feet 6 inches"));
-		turtleList.add(new Turtle("Melanie"));
+		turtleList.add(new Turtle("Melanie", "4 foot 1 inches", 940)); // want to skip middle parameter : need to figure out
 		
 		for(Turtle turtleGuide : turtleList) {
 			System.out.println(turtleGuide);

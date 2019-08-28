@@ -18,7 +18,7 @@ public class Shark extends SeaCreature implements Air {
 	}
 	
 	public Shark() {
-		this("Pico");
+		this("Pico"); // attempting to look for a better default
 		
 	}
 	
@@ -42,5 +42,6 @@ public class Shark extends SeaCreature implements Air {
 	public void diet(Human man) {
 		System.out.println(this.getTag() + " is a man eater!!");
 	}
+
 	
 }

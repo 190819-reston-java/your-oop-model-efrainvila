@@ -18,7 +18,7 @@ public class Turtle extends SeaCreature implements Air {
 	}
 	
 	public Turtle() {
-		this("Lal");
+		this("Lal"); // attempting to look for a better default
 	}
 
 	public void breathing() {

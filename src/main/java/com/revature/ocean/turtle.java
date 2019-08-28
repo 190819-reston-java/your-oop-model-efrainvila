@@ -7,18 +7,17 @@ public class Turtle extends SeaCreature implements Air {
 		super(tag, size, travel);
 		
 	}
-
-	public Turtle() {
-		this("Lal");
+	
+	public Turtle(String tag, String size) {
+		this(tag, size, 1842);
 	}
 	
 	public Turtle(String tag) {
 		this(tag, "3 feet 6 inches");
 	}
-
-
-	public Turtle(String tag, String size) {
-		this(tag, size, 1842);
+	
+	public Turtle() {
+		this("Lal");
 	}
 
 	public void breathing() {

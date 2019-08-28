@@ -4,7 +4,7 @@ public abstract class SeaCreature {
 
 	private String tag; // a tag id on creature
 	private String size; // size of creature tagged
-	private static int travel; // distance traveled
+	private int travel; // distance traveled
 	
 	
 	// generated from Source Menu
@@ -16,19 +16,16 @@ public abstract class SeaCreature {
 	}
 	
 	public SeaCreature(String tag, String size) {
-		this(tag, size, travel);
-	}
-	
-	
-	
-	public SeaCreature() {
-		this("Untagged creature");
+		this(tag, size, 0);
 	}
 	
 	public SeaCreature(String tag) {
 		this(tag, "Unknown size");
 	}
 	
+	public SeaCreature() {
+		this("Untagged creature");
+	}
 	
 	
 	public void swim() {
@@ -57,11 +54,11 @@ public abstract class SeaCreature {
 		this.size = size;
 	}
 
-	public int istravel() {
+	public int getTravel() {
 		return travel;
 	}
 
-	public void setDistance(int travel) {
+	public void setTravel(int travel) {
 		this.travel = travel;
 	}
 

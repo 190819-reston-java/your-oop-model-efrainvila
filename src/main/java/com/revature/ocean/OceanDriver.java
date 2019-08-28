@@ -30,7 +30,11 @@ public class OceanDriver {
 		SeaCreature s = new Shark();
 		s.diet();
 		
+		SeaCreature t1 = new Turtle("Andrea", "3 feet 9 inches", 683);
+		t1.diet();
 		
+		System.out.println(t.getTravel() + " miles");
+		System.out.println(t1.getTravel() + " miles");
 		
 		
 		

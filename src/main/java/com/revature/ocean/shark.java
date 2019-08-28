@@ -18,7 +18,7 @@ public class Shark extends SeaCreature implements Air {
 	}
 	
 	public Shark() {
-		this("Pico"); // attempting to look for a better default
+		this("Pico"); // attempting to look for a default
 		
 	}
 	

@@ -13,7 +13,7 @@ public class Turtle extends SeaCreature implements Air {
 	}
 	
 	public Turtle(String tag) {
-		this(tag, "7 feet 5 inches");
+		this(tag, "3 feet 6 inches");
 	}
 
 

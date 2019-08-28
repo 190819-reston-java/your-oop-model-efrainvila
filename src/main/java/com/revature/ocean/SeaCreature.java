@@ -68,7 +68,7 @@ public abstract class SeaCreature {
 	// generated from SourceMenu
 	@Override
 	public String toString() {
-		return "SeaCreature [tag id = " + tag + ", current size = " + size + ", distance traveled = " + travel + " miles]";
+		return "Logged Sea Creatures : [tag id = " + tag + ", current size = " + size + ", distance traveled = " + travel + " miles]";
 	}
 	
 	

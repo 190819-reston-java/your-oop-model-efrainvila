@@ -22,20 +22,21 @@ public class Turtle extends SeaCreature implements Air {
 	}
 
 	public void breathing() {
-		System.out.println("takes in a breath on surface and dives underwater.");
+		System.out.println(" takes in a breath on surface and dives underwater.");
 
 	}
 
 	@Override
 	public void diet() {
-		System.out.println("prefers sea grass.");
+		System.out.println(this.getTag() + " prefers sea grass.");
 
 	}
 
 	@Override
 	public void reproduce() {
-		System.out.println("lays eggs on beach.");
+		System.out.println(this.getTag() + " lays eggs on beach.");
 
 	}
-
+	
+	
 }

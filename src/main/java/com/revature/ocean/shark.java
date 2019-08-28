@@ -25,19 +25,19 @@ public class Shark extends SeaCreature implements Air {
 
 
 	public void breathing() {
-		System.out.println("breaths through gills.");
+		System.out.println(" breaths through gills.");
 
 	}
 
 	@Override
 	public void diet() {
-		System.out.println("hunts turtles for food.");
+		System.out.println(this.getTag() + " hunts turtles for food.");
 
 	}
 
 	@Override
 	public void reproduce() {
-		System.out.println("only 1 offspring survive.");
+		System.out.println(this.getTag() + " only 1 offspring survive.");
 
 	}
 

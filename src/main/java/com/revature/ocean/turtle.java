@@ -2,8 +2,9 @@ package com.revature.ocean;
 
 public class turtle extends SeaCreature implements Air {
 
-	public turtle(String tag, String size, boolean carnivore) {
-		super(tag, size, carnivore);
+		
+	public turtle(String tag, String size, boolean predator) {
+		super(tag, size, predator);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -13,7 +14,7 @@ public class turtle extends SeaCreature implements Air {
 	}
 
 	@Override
-	public void feed() {
+	public void diet() {
 		// TODO Auto-generated method stub
 
 	}

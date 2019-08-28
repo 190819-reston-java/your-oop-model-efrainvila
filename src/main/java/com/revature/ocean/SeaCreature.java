@@ -4,25 +4,28 @@ public abstract class SeaCreature {
 
 	private String tag;
 	private String size;
-	private boolean carnivore;
+	private boolean predator;
 	
 	// generated from Source Menu
-	public SeaCreature(String tag, String size, boolean carnivore) {
+	public SeaCreature(String tag, String size, boolean predator) {
 		super();
 		this.tag = tag;
 		this.size = size;
-		this.carnivore = carnivore;
+		this.predator = predator;
 	}
 	
-
+	public SeaCreature(String tag, String size) {
+		this(tag, size, true);
+	}
+	
+	
+	
 	public void swim() {
-		System.out.println(this.tag + " swimming and avoiding predators.");
+		System.out.println(this.tag + " swimming about in the sea.");
 		
 	}
-	
-
-	
-	public abstract void feed();
+		
+	public abstract void diet();
 	
 	public abstract void reproduce();
 	

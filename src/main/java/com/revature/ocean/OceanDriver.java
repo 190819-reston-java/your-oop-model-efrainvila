@@ -3,8 +3,9 @@ package com.revature.ocean;
  * Domain planned: Ocean 
  * Abstract : SeaCreatures
  * Interface : Air
- * Concrete examples : Shark, Turtle
- * Methods :  Breathing, Swim, Feed, Reproduce (may need to change)  
+ * Concrete examples : Shark, Turtle,
+ * Methods :  Breathing, Swim, Diet, Reproduce (may need to change)
+ * Strings : tag, size, diet  
  *  
  * @author Efrain Vila
  *

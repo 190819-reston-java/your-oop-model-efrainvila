@@ -10,15 +10,15 @@ public class Turtle extends SeaCreature implements Air {
 	}
 	
 	public Turtle(String tag, String size) {
-		this(tag, size, 1842);
+		this(tag, size, 0); // default value of 0 since it is an int
 	}
 	
 	public Turtle(String tag) {
-		this(tag, "3 feet 6 inches");
+		this(tag, "Unknown size"); // default value
 	}
 	
 	public Turtle() {
-		this("Lal"); // attempting to look for a better default
+		this("Untagged Turtle"); // default value
 	}
 
 	public void breathing() {

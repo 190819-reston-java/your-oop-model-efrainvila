@@ -21,14 +21,16 @@ public class OceanDriver {
 	public static void main(String[] args) {
 		System.out.println("OceanDriver found : " + new Shark("Ema","6 feet 3 inches,", 297)); 
 		System.out.println("Log of Sea Creatures");
-		System.out.println(new Shark("Laura","9 feet 3 inches", 702));  // want to add listing of all known sharks
+		System.out.println(new Shark("Pico", "7 feet 5 inches", 15624));
+		System.out.println(new Turtle("Lal", "3 feet 6 inches", 1842));
+		System.out.println(new Shark("Laura","9 feet 3 inches", 702));  
 		System.out.println(new Turtle("Thesis", "2 feet 3 inches", 7889)); // want to add listing of all known turtles
 		
 		
-		Turtle t = new Turtle();
+		Turtle t = new Turtle("Lal");
 		t.reproduce();
 		
-		Shark s = new Shark();
+		Shark s = new Shark("Pico");
 		s.diet();
 		
 		Turtle t1 = new Turtle("Andrea", "3 feet 9 inches", 683);
@@ -61,6 +63,8 @@ public class OceanDriver {
 			System.out.println(sharkGuide);
 		}
 		
+		
+	
 		//System.out.println(sharkList);
 		
 		

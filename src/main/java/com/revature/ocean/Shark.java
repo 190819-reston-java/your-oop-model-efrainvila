@@ -10,15 +10,15 @@ public class Shark extends SeaCreature implements Air {
 	}
 	
 	public Shark(String tag, String size) {
-		this(tag, size, 15624);
+		this(tag, size, 0); // default value of 0 since it is an int
 	}
 	
 	public Shark(String tag) {
-		this(tag, "7 feet 5 inches");
+		this(tag, "Unknown Size"); // default value
 	}
 	
 	public Shark() {
-		this("Pico"); // attempting to look for a default
+		this("Untagged Shark"); // default value
 		
 	}
 	

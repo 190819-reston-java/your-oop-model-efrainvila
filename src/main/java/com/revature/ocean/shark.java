@@ -2,10 +2,27 @@ package com.revature.ocean;
 
 public class Shark extends SeaCreature implements Air {
 
-	public Shark(String tag, String size, boolean predator) {
-		super(tag, size, predator);
+
+	public Shark(String tag, String size, int travel) {
+		super(tag, size, travel);
 		
 	}
+
+	
+	public Shark() {
+		this("Pico");
+		
+	}
+	
+	public Shark(String tag) {
+		this(tag, "7 feet 5 inches");
+	}
+
+
+	public Shark(String tag, String size) {
+		this(tag, size, 15624);
+	}
+
 
 	public void breathing() {
 		System.out.println("breaths through gills.");

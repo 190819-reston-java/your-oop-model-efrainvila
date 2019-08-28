@@ -4,19 +4,19 @@ public abstract class SeaCreature {
 
 	private String tag; // a tag id on creature
 	private String size; // size of creature tagged
-	private boolean predator; // is creature a predator
+	private static int travel; // distance traveled
 	
 	
 	// generated from Source Menu
-	public SeaCreature(String tag, String size, boolean predator) {
+	public SeaCreature(String tag, String size, int travel) {
 		super();
 		this.tag = tag; 
 		this.size = size; 
-		this.predator = predator;
+		this.travel = travel;
 	}
 	
 	public SeaCreature(String tag, String size) {
-		this(tag, size, true);
+		this(tag, size, travel);
 	}
 	
 	
@@ -57,18 +57,18 @@ public abstract class SeaCreature {
 		this.size = size;
 	}
 
-	public boolean isPredator() {
-		return predator;
+	public int istravel() {
+		return travel;
 	}
 
-	public void setPredator(boolean predator) {
-		this.predator = predator;
+	public void setDistance(int travel) {
+		this.travel = travel;
 	}
 
 	// generated from SourceMenu
 	@Override
 	public String toString() {
-		return "SeaCreature [tag=" + tag + ", size=" + size + ", predator=" + predator + "]";
+		return "SeaCreature [tag id = " + tag + ", current size = " + size + ", distance traveled = " + travel + " miles]";
 	}
 	
 	

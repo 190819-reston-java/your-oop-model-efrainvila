@@ -3,9 +3,22 @@ package com.revature.ocean;
 public class Turtle extends SeaCreature implements Air {
 
 		
-	public Turtle(String tag, String size, boolean predator) {
-		super(tag, size, predator);
+	public Turtle(String tag, String size, int travel) {
+		super(tag, size, travel);
 		
+	}
+
+	public Turtle() {
+		this("Lal");
+	}
+	
+	public Turtle(String tag) {
+		this(tag, "7 feet 5 inches");
+	}
+
+
+	public Turtle(String tag, String size) {
+		this(tag, size, 1842);
 	}
 
 	public void breathing() {

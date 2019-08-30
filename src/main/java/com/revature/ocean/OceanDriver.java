@@ -20,7 +20,7 @@ import java.util.TreeSet;
  * Possible Future Implementations
  * ----------------------
  * - Allow user input data
- * 
+ * - Adding more creatures and parameters
  *  
  * 
  * Idea comes from https://www.ocearch.org/
@@ -36,7 +36,7 @@ public class OceanDriver {
 		System.out.println(new Shark("Pico", "7 feet 5 inches", 15624));
 		System.out.println(new Turtle("Lal", "3 feet 6 inches", 1842));
 		System.out.println(new Shark("Laura","9 feet 3 inches", 702));  
-		System.out.println(new Turtle("Thesis", "2 feet 3 inches", 7889)); // future idea : add listing of all known creature etc.
+		System.out.println(new Turtle("Thesis", "2 feet 3 inches", 7889)); 
 		
 		
 		Turtle t = new Turtle("Lal");
@@ -73,8 +73,8 @@ public class OceanDriver {
 		List<Shark> sharkList = new ArrayList<Shark>();
 		sharkList.add(new Shark("Jon", "8 feet 7 inches", 373));
 		sharkList.add(new Shark("Chancellor", "6 feet 4 inches", 4436));
-		sharkList.add(new Shark("Gareth", "10 feet 4 inches", 500)); // empty miles
-		sharkList.add(new Shark("Sero", "11 feet 2 inches", 250)); // empty miles
+		sharkList.add(new Shark("Gareth", "10 feet 4 inches")); // empty miles 500
+		sharkList.add(new Shark("Sero", "11 feet 2 inches")); // empty miles 250
 		
 		
 		Iterator<Shark> sharkIterator = sharkList.iterator();
@@ -109,7 +109,7 @@ public class OceanDriver {
 		}
 	}
 		
-	
+		// add handling exception for turtle 
 		
 		
 	}

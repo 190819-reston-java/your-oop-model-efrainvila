@@ -64,7 +64,7 @@ public abstract class SeaCreature {
 
 	public void setTravel(int travel) {
 		if (travel < 0) {
-			throw new NetException(); // throw exception to NetException.java - no negative travel 
+			throw new NetException(); // throw exception to NetException.java - no negative travel allowed 
 		}
 		this.travel = travel; 
 	}

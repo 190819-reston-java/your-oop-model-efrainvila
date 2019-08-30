@@ -1,5 +1,6 @@
 package com.revature.ocean;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -30,33 +31,33 @@ import java.util.TreeSet;
  */
 public class OceanDriver {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		System.out.println("OceanDriver found : " + new Shark("Ema","6 feet 3 inches,", 297)); 
-		System.out.println("Log of Sea Creatures");
+		System.out.println("Current Log of Sea Creatures");
 		System.out.println(new Shark("Pico", "7 feet 5 inches", 15624));
 		System.out.println(new Turtle("Lal", "3 feet 6 inches", 1842));
 		System.out.println(new Shark("Laura","9 feet 3 inches", 702));  
 		System.out.println(new Turtle("Thesis", "2 feet 3 inches", 7889)); 
 		
 		
-		Turtle t = new Turtle("Lal");
+		Turtle t = new Turtle("Harmony");
 		t.reproduce();
 		
-		Shark s = new Shark("Pico");
+		Shark s = new Shark("Lando");
 		s.diet();
 		
 		Turtle t1 = new Turtle("Andrea", "3 feet 9 inches", 683);
 		t1.diet();
 		
-		System.out.println(t.getTravel() + " miles");
-		System.out.println(t1.getTravel() + " miles");
+		System.out.println(t.getTag()+ " has traveled " + t.getTravel() + " miles");
+		System.out.println(t1.getTag()+ " has traveled " + t1.getTravel() + " miles");
 		
 		//overloaded method
 		t.diet(new Fish());
 		s.diet(new Human());
 		
 		//static variable
-		System.out.println(Shark.population);
+		System.out.println("The number of sharks in the log is currently at : "+ Shark.population);
 		
 		//collection mode
 		System.out.println("Shark Logs by Travel Distance");
@@ -68,13 +69,13 @@ public class OceanDriver {
 		
 	}
 	
-	//shark
+	//shark array
 	private static void sharkHerd() {
 		List<Shark> sharkList = new ArrayList<Shark>();
 		sharkList.add(new Shark("Jon", "8 feet 7 inches", 373));
 		sharkList.add(new Shark("Chancellor", "6 feet 4 inches", 4436));
-		sharkList.add(new Shark("Gareth", "10 feet 4 inches")); // empty miles 500
-		sharkList.add(new Shark("Sero", "11 feet 2 inches")); // empty miles 250
+		sharkList.add(new Shark("Gareth", "10 feet 4 inches", 500)); // empty miles 500
+		sharkList.add(new Shark("Sero", "11 feet 2 inches", 250)); // empty miles 250
 		
 		
 		Iterator<Shark> sharkIterator = sharkList.iterator();
@@ -91,13 +92,19 @@ public class OceanDriver {
 			for(Shark sharkGuide : travelSharkDistance) {
 				System.out.println(sharkGuide);
 			}
+		// checked exception
 		
+		 try {
+		 
+		 } catch(ArrayStoreException e) { //could be used for string being inputed into int miles parameter
+			 System.out.println("The information provide is of the wrong type." + e.getMessage());
+		 }
+		 
 	}	
 		
 		
-	
-	//turtle
-	private static void turtleBale() {
+	//turtle array
+	private static void turtleBale() throws IOException {
 		List<Turtle> turtleList = new ArrayList<Turtle>();
 		turtleList.add(new Turtle("Kate", "3 feet 8 inches", 1994));
 		turtleList.add(new Turtle("Polymnia", "2 feet 6 inches", 3316));
@@ -107,9 +114,18 @@ public class OceanDriver {
 		for(Turtle turtleGuide : turtleList) {
 			System.out.println(turtleGuide);
 		}
+		// unchecked exception for turtle - need to re-check handling
+		try {
+			
+		}	catch (ArrayIndexOutOfBoundsException e){
+			System.out.println("Some turtles ate a part of the log and the elements have fallen out of bounds. Oops.");
+			e.printStackTrace();
+		}
+		
 	}
 		
-		// add handling exception for turtle 
 		
 		
-	}
+		
+		
+}

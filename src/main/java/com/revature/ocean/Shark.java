@@ -46,7 +46,7 @@ public class Shark extends SeaCreature implements Air, Comparable<Shark> {
 
 	
 	public int compareTo(Shark o) {
-		// attempted to compare distance here but this line below only allows strings as parameter
+		// attempted to compare distance as an int here but this line below only allows strings as parameter
 		return this.getSize().compareTo(getSize());
 	}
 

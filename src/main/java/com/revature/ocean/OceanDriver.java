@@ -15,7 +15,7 @@ import java.util.TreeSet;
  * Implementation :  Turtle implements Air - (sharks get oxygen through gills) 
  * Methods :  Breathing from interface, all others from abstract class SeaCreature : Swim, Diet, Reproduce	(add parameter boolean gender - FI)
  * Fields : Strings : tag, size	(may need to convert size to int - FI), int : travel 
- * Comparable : size (turtle) but shark can be also compared making Seacreature iterable
+ * Comparable : size (turtle) but shark can be also compared making SeaCreature iterable
  * Comparator : int travel (sharks)	: (string size if converted to int, gender if added - FI)
  * Exceptions : throw to NetException (travel), IndexOutOfBoundsException (turtle)
  * 
@@ -53,6 +53,10 @@ public class OceanDriver {
 		System.out.println(t.getTag()+ " has traveled " + t.getTravel() + " miles");
 		System.out.println(t1.getTag()+ " has traveled " + t1.getTravel() + " miles");
 		
+		//throwing exception
+		//Shark s2 = new Shark("Brunswich", "8 feet 9 inches", 3438);
+		//s2.setTravel(-3438);
+				
 		//overloaded method
 		t.diet(new Fish());
 		s.diet(new Human());
@@ -98,24 +102,24 @@ public class OceanDriver {
 		
 		
 	//turtle array
-	private static void turtleBale() {
+	private static void turtleBale() {  // removed IOException
 		List<Turtle> turtleList = new ArrayList<Turtle>();
 		turtleList.add(new Turtle("Kate", "3 feet 8 inches", 1994));
 		turtleList.add(new Turtle("Polymnia", "2 feet 6 inches", 3316));
 		turtleList.add(new Turtle("Holly", "3 feet 6 inches"));
-		turtleList.add(new Turtle("Melanie", "4 foot 1 inches", 940)); // can not skip begining/middle parameters, must create another constructor
+		turtleList.add(new Turtle("Melanie", "4 foot 1 inches", 940)); // can not skip beginning/middle parameters, must create another constructor
 		
 		SortedSet<Turtle> turtleSort = new TreeSet<Turtle>(turtleList);
 			for(Turtle turtleGuide : turtleSort) {
 				System.out.println(turtleGuide);
 			}
 		
-		// checked exception for turtle - need to re-check handling
+		// unchecked exception for turtle - need to re-check handling
 			
 			try {
 				int j = 1;
 				for(int i = 0; i < turtleList.size(); i++) {
-					System.out.println(turtleList.get(i));
+					//System.out.println(turtleList.get(i));
 					System.out.println(turtleList.get(j));
 					j++;
 				}

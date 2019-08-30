@@ -1,8 +1,6 @@
 package com.revature.ocean;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -21,6 +19,7 @@ import java.util.TreeSet;
  * 
  * Possible Future Implementations
  * ----------------------
+ * - Need to add a checked exception
  * - Allow user input data
  * - Adding more creatures types
  * - Add parameter boolean gender (True for female - False for male)
@@ -34,7 +33,7 @@ import java.util.TreeSet;
 public class OceanDriver {
 
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		
 		Shark s = new Shark("Shayna");
 		s.diet();
@@ -61,6 +60,8 @@ public class OceanDriver {
 		//throwing exception
 		Shark s2 = new Shark("Brunswich", "8 feet 9 inches", 3438); //-
 		s2.setTravel(-3438); // can not have negative number //-
+		
+		
 		
 		System.out.println("Shark Listing by Travel Distance");
 		System.out.println("--------------------------------");

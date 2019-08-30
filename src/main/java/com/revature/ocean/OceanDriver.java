@@ -44,6 +44,7 @@ public class OceanDriver {
 		
 		Turtle t1 = new Turtle("Andrea", "3 feet 9 inches", 683);
 		t1.diet();
+		t1.breathing();
 		System.out.println(t1.getTag()+ " has traveled " + t1.getTravel() + " miles");
 		System.out.println("");
 		

@@ -23,7 +23,7 @@ public class Turtle extends SeaCreature implements Air {
 	}
 
 	public void breathing() {
-		System.out.println(" takes in a breath on surface and dives underwater.");
+		System.out.println(this.getTag() + " takes in a breath on surface and dives underwater.");
 
 	}
 

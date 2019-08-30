@@ -5,10 +5,9 @@ import java.io.IOException;
 public abstract class SeaCreature implements Comparable<SeaCreature>{
 
 	private String tag; // a tag id on creature
-	// private boolean gender; // gender of creature (True for female, False for males)
 	private String size; // size of creature tagged
 	private int travel; // distance traveled
-	
+	// private boolean gender; // gender of creature (True for female, False for males)
 	
 	
 	// generated from Source Menu - constructors
@@ -72,7 +71,7 @@ public abstract class SeaCreature implements Comparable<SeaCreature>{
 	// generated from SourceMenu - toString override
 	@Override
 	public String toString() {
-		return "[tag id = " + tag + ", current size = " + size + ", distance traveled = " + travel + " miles]";
+		return "Tag Name = " + tag + ", Current Size = " + size + ", Distance Traveled = " + travel + " miles";
 	}
 	
 	// can compare both shark and turtle via size

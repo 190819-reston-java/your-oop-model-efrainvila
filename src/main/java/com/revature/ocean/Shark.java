@@ -22,12 +22,7 @@ public class Shark extends SeaCreature  {
 		this("Untagged Shark"); // default value
 		
 	}
-	
 
-	// public void breathing() {
-	//	System.out.println(" breaths through gills.");
-	//
-	//}
 
 	@Override
 	public void diet() {
@@ -43,13 +38,6 @@ public class Shark extends SeaCreature  {
 	public void diet(Human man) {
 		System.out.println(this.getTag() + " is a man eater!!");
 	}
-
-	
-	//	public int compareTo(Shark o) {
-	// attempted to compare distance as an int here but this line below only allows strings as parameter
-	//	return this.getSize().compareTo(getSize());
-	// }
-
 
 	
 }

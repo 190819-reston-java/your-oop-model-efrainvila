@@ -1,7 +1,8 @@
 package com.revature.ocean;
 
-public class Shark extends SeaCreature implements Air {
-
+public class Shark extends SeaCreature implements Air, Comparable<Shark> { 
+	
+	// shark population counter
 	public static int population = 0;
 
 	public Shark(String tag, String size, int travel) {
@@ -42,6 +43,13 @@ public class Shark extends SeaCreature implements Air {
 	public void diet(Human man) {
 		System.out.println(this.getTag() + " is a man eater!!");
 	}
+
+	
+	public int compareTo(Shark o) {
+		// attempted to compare distance here but this line below only allows strings as parameter
+		return this.getSize().compareTo(getSize());
+	}
+
 
 	
 }

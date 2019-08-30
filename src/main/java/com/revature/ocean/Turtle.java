@@ -2,6 +2,7 @@ package com.revature.ocean;
 
 public class Turtle extends SeaCreature implements Air {
 
+	// turtle population counter
 	public static int population = 0;	
 	
 	public Turtle(String tag, String size, int travel) {

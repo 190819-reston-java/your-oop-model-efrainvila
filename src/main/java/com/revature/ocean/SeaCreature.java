@@ -1,13 +1,17 @@
 package com.revature.ocean;
 
+import java.io.IOException;
+
 public abstract class SeaCreature {
 
 	private String tag; // a tag id on creature
+	// private boolean gender; // gender of creature (True for female, False for males)
 	private String size; // size of creature tagged
 	private int travel; // distance traveled
 	
 	
-	// generated from Source Menu
+	
+	// generated from Source Menu - constructors
 	public SeaCreature(String tag, String size, int travel) {
 		super();
 		this.tag = tag; 
@@ -37,7 +41,7 @@ public abstract class SeaCreature {
 	
 	public abstract void reproduce();
 
-	// generated from Source Menu
+	// generated from Source Menu - getters and setters
 	public String getTag() {
 		return tag;
 	}
@@ -59,10 +63,13 @@ public abstract class SeaCreature {
 	}
 
 	public void setTravel(int travel) {
-		this.travel = travel;
+		if (travel < 0) {
+			throw new NetException(); // throw exception to NetException.java - no negative travel 
+		}
+		this.travel = travel; 
 	}
 
-	// generated from SourceMenu
+	// generated from SourceMenu - toString override
 	@Override
 	public String toString() {
 		return "[tag id = " + tag + ", current size = " + size + ", distance traveled = " + travel + " miles]";

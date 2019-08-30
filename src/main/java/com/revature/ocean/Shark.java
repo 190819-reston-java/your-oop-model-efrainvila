@@ -1,6 +1,6 @@
 package com.revature.ocean;
 
-public class Shark extends SeaCreature implements Air, Comparable<Shark> { 
+public class Shark extends SeaCreature  { 
 	
 	// shark population counter
 	public static int population = 0;
@@ -24,10 +24,10 @@ public class Shark extends SeaCreature implements Air, Comparable<Shark> {
 	}
 	
 
-	public void breathing() {
-		System.out.println(" breaths through gills.");
-
-	}
+	// public void breathing() {
+	//	System.out.println(" breaths through gills.");
+	//
+	//}
 
 	@Override
 	public void diet() {
@@ -45,10 +45,10 @@ public class Shark extends SeaCreature implements Air, Comparable<Shark> {
 	}
 
 	
-	public int compareTo(Shark o) {
-		// attempted to compare distance as an int here but this line below only allows strings as parameter
-		return this.getSize().compareTo(getSize());
-	}
+	//	public int compareTo(Shark o) {
+	// attempted to compare distance as an int here but this line below only allows strings as parameter
+	//	return this.getSize().compareTo(getSize());
+	// }
 
 
 	

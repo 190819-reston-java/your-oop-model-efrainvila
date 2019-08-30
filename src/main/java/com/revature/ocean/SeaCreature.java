@@ -2,7 +2,7 @@ package com.revature.ocean;
 
 import java.io.IOException;
 
-public abstract class SeaCreature {
+public abstract class SeaCreature implements Comparable<SeaCreature>{
 
 	private String tag; // a tag id on creature
 	// private boolean gender; // gender of creature (True for female, False for males)
@@ -75,5 +75,9 @@ public abstract class SeaCreature {
 		return "[tag id = " + tag + ", current size = " + size + ", distance traveled = " + travel + " miles]";
 	}
 	
-	
+	// can compare both shark and turtle via size
+	public int compareTo(SeaCreature o) {
+		// attempted to compare distance as an int here but this line below only allows strings as parameter
+		return this.getSize().compareTo(o.getSize());
+	}
 }

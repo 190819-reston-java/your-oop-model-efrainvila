@@ -11,12 +11,13 @@ import java.util.TreeSet;
  * Domain planned: Ocean 
  * Abstract : SeaCreatures - all life forms that inhabit the ocean domain
  * Interface : Air - some creatures can breath with lungs, others directly from water
- * Concrete examples : Shark, Turtle 	(other creatures - FI)
- * Methods :  Breathing, Swim, Diet, Reproduce	(add parameter boolean gender - FI)
- * Strings : tag, size	 (may need to convert size to int - FI), travel
- * Comparable : travel
- * Sort : travel 	(size if converted to int, gender if added - FI)
- * Exceptions : throw to NetException,
+ * Concrete Classes : Shark, Turtle 	(other creatures - FI)
+ * Implementation :  Turtle implements Air - (sharks get oxygen through gills) 
+ * Methods :  Breathing from interface, all others from abstract class SeaCreature : Swim, Diet, Reproduce	(add parameter boolean gender - FI)
+ * Fields : Strings : tag, size	(may need to convert size to int - FI), int : travel 
+ * Comparable : size (turtle) but shark can be also compared making Seacreature iterable
+ * Comparator : int travel (sharks)	: (string size if converted to int, gender if added - FI)
+ * Exceptions : throw to NetException (travel), IndexOutOfBoundsException (turtle)
  * 
  * Possible Future Implementations
  * ----------------------
@@ -63,7 +64,7 @@ public class OceanDriver {
 		System.out.println("Shark Logs by Travel Distance");
 		sharkHerd(); // heard is a group of sharks
 		
-		System.out.println("Turtle Logs");
+		System.out.println("Turtle Logs by Size");
 		turtleBale(); //bale is a group of turtles
 		
 		
@@ -85,42 +86,44 @@ public class OceanDriver {
 			}
 		
 		// sorting sharkList		
-		SortedSet<Shark> travelSharkDistance = new TreeSet<Shark>(new DistanceTravel()); // sharks works need to try turtle
+		SortedSet<Shark> travelSharkDistance = new TreeSet<Shark>(new DistanceTravel()); 
 			travelSharkDistance.addAll(sharkList);
 		
 		// System.out.println("**checking travel distance**");
 			for(Shark sharkGuide : travelSharkDistance) {
 				System.out.println(sharkGuide);
 			}
-		// checked exception
-		
-		 try {
-		 
-		 } catch(ArrayStoreException e) { //could be used for string being inputed into int miles parameter
-			 System.out.println("The information provide is of the wrong type." + e.getMessage());
-		 }
 		 
 	}	
 		
 		
 	//turtle array
-	private static void turtleBale() throws IOException {
+	private static void turtleBale() {
 		List<Turtle> turtleList = new ArrayList<Turtle>();
 		turtleList.add(new Turtle("Kate", "3 feet 8 inches", 1994));
 		turtleList.add(new Turtle("Polymnia", "2 feet 6 inches", 3316));
 		turtleList.add(new Turtle("Holly", "3 feet 6 inches"));
 		turtleList.add(new Turtle("Melanie", "4 foot 1 inches", 940)); // can not skip begining/middle parameters, must create another constructor
 		
-		for(Turtle turtleGuide : turtleList) {
-			System.out.println(turtleGuide);
-		}
-		// unchecked exception for turtle - need to re-check handling
-		try {
+		SortedSet<Turtle> turtleSort = new TreeSet<Turtle>(turtleList);
+			for(Turtle turtleGuide : turtleSort) {
+				System.out.println(turtleGuide);
+			}
+		
+		// checked exception for turtle - need to re-check handling
 			
-		}	catch (ArrayIndexOutOfBoundsException e){
-			System.out.println("Some turtles ate a part of the log and the elements have fallen out of bounds. Oops.");
-			e.printStackTrace();
-		}
+			try {
+				int j = 1;
+				for(int i = 0; i < turtleList.size(); i++) {
+					System.out.println(turtleList.get(i));
+					System.out.println(turtleList.get(j));
+					j++;
+				}
+					
+			}	catch (IndexOutOfBoundsException e){
+				System.out.println("Some turtles ate a part of the log and the elements have fallen out of bounds. Oops.");
+				e.printStackTrace();
+			}
 		
 	}
 		

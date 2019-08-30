@@ -58,8 +58,8 @@ public class OceanDriver {
 		System.out.println("");
 		
 		//throwing exception
-		Shark s2 = new Shark("Brunswich", "8 feet 9 inches", 3438); //-
-		s2.setTravel(-3438); // can not have negative number //-
+		//Shark s2 = new Shark("Brunswich", "8 feet 9 inches", 3438); //-
+		//s2.setTravel(-3438); // can not have negative number //-
 		
 		
 		
@@ -114,7 +114,7 @@ public class OceanDriver {
 			try {
 				int j = 1;
 				for(int i = 0; i < turtleList.size(); i++) {
-					turtleList.get(j); //-
+					//turtleList.get(j); //-
 					j++;
 				}
 					

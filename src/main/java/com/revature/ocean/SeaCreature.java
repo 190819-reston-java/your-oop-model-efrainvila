@@ -1,7 +1,5 @@
 package com.revature.ocean;
 
-import java.io.IOException;
-
 public abstract class SeaCreature implements Comparable<SeaCreature>{
 
 	private String tag; // a tag id on creature

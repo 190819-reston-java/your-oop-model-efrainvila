@@ -32,9 +32,10 @@ public class Shark extends SeaCreature  {
 
 	@Override
 	public void reproduce() {
-		System.out.println(this.getTag() + " only 1 offspring survive.");
+		System.out.println(this.getTag() + " only produced 1 offspring");
 
 	}
+	
 	public void diet(Human man) {
 		System.out.println(this.getTag() + " is a man eater!!");
 	}

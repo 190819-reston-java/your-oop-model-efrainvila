@@ -4,7 +4,7 @@ public class NetException extends RuntimeException {
 
 	// unchecked exception - one sample of a throw exception from SeaCreature.setTravel() 
 	public NetException() {
-		super("Sea Creature do not travel in negative miles");
+		super("Sea creatures do not travel in negative miles.");
 	}
 
 	public NetException(String message) {

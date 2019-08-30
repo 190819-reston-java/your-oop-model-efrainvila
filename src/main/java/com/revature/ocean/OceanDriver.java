@@ -36,44 +36,39 @@ public class OceanDriver {
 
 	public static void main(String[] args) throws IOException {
 		
-		Shark s = new Shark("Shayna"); //adds new Shark with default diet method
+		Shark s = new Shark("Shayna");
 		s.diet();
+		s.swim();
 		s.reproduce();
 		System.out.println("");
 		
-		Turtle t1 = new Turtle("Andrea", "3 feet 9 inches", 683); // adds new Turtle with default diet method
+		Turtle t1 = new Turtle("Andrea", "3 feet 9 inches", 683);
 		t1.diet();
-		
-		System.out.println(t1.getTag()+ " has traveled " + t1.getTravel() + " miles"); // shows travel parameter
+		System.out.println(t1.getTag()+ " has traveled " + t1.getTravel() + " miles");
 		System.out.println("");
 		
 		Turtle t = new Turtle("Harmony");
 		t.reproduce();
-		
-		System.out.println(t.getTag()+ " has traveled " + t.getTravel() + " miles"); // show default value (0) when not given
-			
+		System.out.println(t.getTag()+ " has traveled " + t.getTravel() + " miles");	
 		System.out.println("");
 		
 		//overloaded
 		t1.diet(new Fish()); // changes "Andrea" diet from sea grass to fish
-		s.diet(new Human()); // changes "Lando" diet from turtle to human
+		s.diet(new Human()); // changes "Shayna" diet from turtle to human
 		System.out.println("");
 		
 		//throwing exception
-		//Shark s2 = new Shark("Brunswich", "8 feet 9 inches", 3438);
-		//s2.setTravel(-3438); // can not have negative number
+		Shark s2 = new Shark("Brunswich", "8 feet 9 inches", 3438); //-
+		s2.setTravel(-3438); // can not have negative number //-
 		
-	
-		//collection mode
 		System.out.println("Shark Listing by Travel Distance");
 		System.out.println("--------------------------------");
-		sharkHerd(); // heard is a group of sharks
+		sharkHerd(); // herd is a group of sharks
 		
 		System.out.println("");
 		System.out.println("Turtle Listing by Size");
 		System.out.println("----------------------");
-		turtleBale(); // bale is a group of turtles
-				
+		turtleBale(); // bale is a group of turtles		
 	}
 	
 	//shark array
@@ -113,18 +108,18 @@ public class OceanDriver {
 				System.out.println(turtleGuide);
 			}
 		
-		// unchecked exception for turtle - need to re-check handling	
+		// exception for turtle - need to re-check handling	
 			try {
 				int j = 1;
 				for(int i = 0; i < turtleList.size(); i++) {
-					//System.out.println(turtleList.get(i));
-					//System.out.println(turtleList.get(j));
+					turtleList.get(j); //-
 					j++;
 				}
 					
 			}	catch (IndexOutOfBoundsException e){
-				System.out.println("Some turtles ate a part of the log and the elements have fallen out of bounds. Oops.");
+				System.out.println(" ** A turtle ate a part of the array list and the elements have fallen out of bounds. Oops. **");
 				e.printStackTrace();
+				return;
 			}
 			//static variable
 			System.out.println("The number of turtle in the listing is currently at : "+ Turtle.population);

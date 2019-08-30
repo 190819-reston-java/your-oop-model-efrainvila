@@ -1,7 +1,8 @@
 package com.revature.ocean;
 
+	// best to name interface as a verb : concrete class IS A interface
 public interface Air {
 
-	public void breathing(); // breathing through gills or lungs (air sacks), or even directly from water
+	public void breathing();
 	
 }

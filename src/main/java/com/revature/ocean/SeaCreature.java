@@ -76,7 +76,7 @@ public abstract class SeaCreature implements Comparable<SeaCreature>{
 	
 	// can compare both shark and turtle via size
 	public int compareTo(SeaCreature o) {
-		// attempted to compare distance as an int here but this line below only allows strings as parameter
+		// attempted to compare distance as an int here but this line below only allows strings as parameter - future note
 		return this.getSize().compareTo(o.getSize());
 	}
 }
